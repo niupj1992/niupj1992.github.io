@@ -93,13 +93,13 @@
 
 
 
-<meta name="description" content="Ceph架构Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
+<meta name="description" content="Ceph架构  Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
 <meta name="keywords" content="ceph,architecture">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ceph-architecture">
 <meta property="og:url" content="http://yoursite.com/2017/07/24/ceph-architecture/index.html">
 <meta property="og:site_name" content="niupj&#39;s blog">
-<meta property="og:description" content="Ceph架构Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
+<meta property="og:description" content="Ceph架构  Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i.imgur.com/AnaqOwN.png">
 <meta property="og:image" content="http://i.imgur.com/WvZYpEr.png">
@@ -119,10 +119,17 @@
 <meta property="og:image" content="http://i.imgur.com/nXpimbX.png">
 <meta property="og:image" content="http://i.imgur.com/lUIZqYg.png">
 <meta property="og:image" content="http://i.imgur.com/4sDFCUE.png">
-<meta property="og:updated_time" content="2017-07-27T13:25:11.564Z">
+<meta property="og:image" content="http://i.imgur.com/df9JTKb.png">
+<meta property="og:image" content="http://i.imgur.com/Znlg4s0.png">
+<meta property="og:image" content="http://i.imgur.com/3iCMLYi.png">
+<meta property="og:image" content="http://i.imgur.com/Jl6ePPg.png">
+<meta property="og:image" content="http://i.imgur.com/WwCMDZX.png">
+<meta property="og:image" content="http://i.imgur.com/ZJqRvHm.png">
+<meta property="og:image" content="http://i.imgur.com/E7wYa5U.png">
+<meta property="og:updated_time" content="2017-07-28T16:53:49.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ceph-architecture">
-<meta name="twitter:description" content="Ceph架构Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
+<meta name="twitter:description" content="Ceph架构  Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。">
 <meta name="twitter:image" content="http://i.imgur.com/AnaqOwN.png">
 
 
@@ -382,10 +389,11 @@
       
 
       
-        <h1 id="Ceph架构"><a href="#Ceph架构" class="headerlink" title="Ceph架构"></a>Ceph架构</h1><p>Ceph独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。</p>
+        <p>Ceph架构 </p>
+<p><a href="http://docs.ceph.com/docs/master/glossary/#term-ceph" target="_blank" rel="external">Ceph</a>独特的提供了统一了object， block，和file storage的系统。Ceph高度可靠，容易管理，以及免费。Ceph的优势可以转移公司的IT基础建设和你的能力到管理海量的数据中。Ceph提供额外的扩展性–成千的客户端访问PB和EB大小的数据。一个Ceph节点利用商业硬件和智能守护进程，一个Ceph存储集群可容纳大量的节点，这些节点互相通信来动态复制以及重分配数据。</p>
 <a id="more"></a>
 <p><img src="http://i.imgur.com/AnaqOwN.png" alt=""></p>
-<h2 id="Ceph的存储集群"><a href="#Ceph的存储集群" class="headerlink" title="Ceph的存储集群"></a>Ceph的存储集群</h2><p>Ceph基于RADOS(Reliable Autonomic Distributed Object Store)提供了无限可扩展的存储集群，详细可以阅读论文</p>
+<h1 id="Ceph的存储集群"><a href="#Ceph的存储集群" class="headerlink" title="Ceph的存储集群"></a>Ceph的存储集群</h1><p>Ceph基于RADOS(Reliable Autonomic Distributed Object Store)提供了无限可扩展的存储集群，详细可以阅读论文</p>
 <p>一个Ceph存储集群包含两类守护进程</p>
 <ul>
 <li><p>Ceph Monitor </p>
@@ -397,11 +405,11 @@
 <p>Ceph monitor维护了集群映射的主拷贝。Ceph的monitors集群通过监控守护进程的失效确保了集群的高可靠性。存储集群客户端通过montior检索集群映射的拷贝。</p>
 <p>Ceph OSD 守护进程检查自身的状态以及其他OSDs的状态并报告给monitors。</p>
 <p>存储集群客户端和每一个OSD守护进程使用CRUSH算法来高效的计算数据位置信息，而不是依赖一个中心查询表。Ceph’s的高层特性包括基于 librados 提供给存储集群的一个本地接口，以及构建在 librados 上层的一系列服务接口。</p>
-<h3 id="存储数据"><a href="#存储数据" class="headerlink" title="存储数据"></a>存储数据</h3><p>Ceph存储集群从客户端接收数据并存储为对象，不管对方是Ceph Block Device, Ceph Object Storage, Ceph Fileststem 或者是通过 librados 定制的实现。每一个对象对应文件系统中的一个文件存储在对象存储设备中(Object Storage Device)。Ceph OSD守护进程在存储磁盘上处理读写操作。</p>
+<h2 id="存储数据"><a href="#存储数据" class="headerlink" title="存储数据"></a>存储数据</h2><p>Ceph存储集群从客户端接收数据并存储为对象，不管对方是Ceph Block Device, Ceph Object Storage, Ceph Fileststem 或者是通过 librados 定制的实现。每一个对象对应文件系统中的一个文件存储在对象存储设备中(Object Storage Device)。Ceph OSD守护进程在存储磁盘上处理读写操作。</p>
 <p><img src="http://i.imgur.com/EYYzL6y.png" alt=""></p>
 <p>Ceph OSD守护进程在一个扁平的命名空间(没有层级目录)存储所有数据为对象。一个对象包括id，二进制数据，以及包含一组j键值对形式的元数据，元数据的语义完全依赖客户端。例如，CephFS利用元数据存储文件属性，文件所有者，创建时间，最后修改的日期等。</p>
 <p>Note: 对象的ID在整个集群中都是唯一的，并不只是本地文件系统。</p>
-<h3 id="扩展性和高可靠性"><a href="#扩展性和高可靠性" class="headerlink" title="扩展性和高可靠性"></a>扩展性和高可靠性</h3><p>在传统架构中，客户端需要和中心组件交互（例如网关，broker，API，facade等），中心组件往往是进入一个复杂子系统的唯一入口。这样的设定引入了单点故障，就限制了性能和可靠性。</p>
+<h2 id="扩展性和高可靠性"><a href="#扩展性和高可靠性" class="headerlink" title="扩展性和高可靠性"></a>扩展性和高可靠性</h2><p>在传统架构中，客户端需要和中心组件交互（例如网关，broker，API，facade等），中心组件往往是进入一个复杂子系统的唯一入口。这样的设定引入了单点故障，就限制了性能和可靠性。</p>
 <p>Ceph去除了中心网关来使客户端能够和OSD守护进程直接交互。OSD守护进程在其他节点上创建对象副本来确保数据安全和高可靠性。Ceph同时使用了一个monitor集群来确保可靠性。为了实现去中心化，Ceph使用了CRUSH算法。</p>
 <h3 id="CRUSH介绍"><a href="#CRUSH介绍" class="headerlink" title="CRUSH介绍"></a>CRUSH介绍</h3><p>Ceph客户端和OSD守护进程都使用CRUSH算法来高效的计算出对象位置信息，而不是依赖于一个中心的查询表。CRUSH使用了智能的数据副本来确保弹性，这点更适合超大规模的存储。接下来的章节提供了CRUSH如何运作的额外细节。CRUSH的详细讨论见<a href="https://ceph.com/wp-content/uploads/2016/08/weil-crush-sc06.pdf" title="论文" target="_blank" rel="external">论文</a>.</p>
 <h3 id="集群映射"><a href="#集群映射" class="headerlink" title="集群映射"></a>集群映射</h3><p>Ceph需要客户端和OSD守护进程知道集群的拓扑，包括了5个映射集合，这就是 “集群映射”。</p>
@@ -492,6 +500,84 @@
 <p>OSD3上发现的日志记录 1,2 和OSD4上新的权威日志有分歧：然后他就被抛弃了，包含块C1v2块的文件就被删除了。然后D1v1块会在数据清理时通过解码函数重建并存储新的主OSD 4。</p>
 <p><img src="http://i.imgur.com/4sDFCUE.png" alt=""></p>
 <p>额外的细节见Erasure Code Notes</p>
+<h2 id="缓存层"><a href="#缓存层" class="headerlink" title="缓存层"></a>缓存层</h2><p>缓存层可以给客户端提供后端存储层的数据子集更好的I/O表现。缓存层包含相对快速，昂贵存储设备（例如，ssd）上创建的pool，配置用来当做缓存层，以及一个后端pool，不管是纠删编码的或者是相对缓慢、便宜的设备配置为商业存储层。Ceph对象处理处理放置对象的位置，层级代理决定向缓存还是后端存储写入对象。所以，缓存层和后端存储层对客户端来说都是透明的。</p>
+<p><img src="http://i.imgur.com/df9JTKb.png" alt=""><br>额外细节见Cache Tiering</p>
+<h2 id="扩展Ceph"><a href="#扩展Ceph" class="headerlink" title="扩展Ceph"></a>扩展Ceph</h2><p>可以通过创建共享对象类 Ceph class 来扩展Ceph。Ceph直接加载存储在 osd class dir 目录中的 .so 类（例如， 默认是$libdir/rados-classes）。当你实现一个类后，可以创建能够调用存储集群的本地方法的新的对象方法，或者其他其他类库或者你自己创建的其他类方法。</p>
+<p>在写的时候，Ceph类可以调用本地或者类方法，可以对未归纳数据（inbound data）执行任何系列操作，然后生成Ceph的原子级应用的结果写入事务。</p>
+<p>在读的时候，Ceph类可以调用本地或者类方法，可以对出站数据（outbound data）执行系列操作然后返回数据到客户端。</p>
+<blockquote>
+<p>Ceph类样例<br>内容管理系统的呈现特定大小和纵横比图片的Ceph类，可以读取归类的位图图像，裁剪到特定纵横比，改变大小，并嵌入不可见的版权或者水印俩帮助保护知识版权；然后保存结果位图到对象存储。</p>
+</blockquote>
+<p>可以通过 src/objclass/objclass.h ， src/fooclass.cc 和 src/barclass 查看样例实现。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Ceph存储集群就像充满活力的有机体。然而，许多存储应用并没有完全应用典型CPU和RAM，但是Ceph做到了。从心跳，到对等，到重平衡集群或者从失效中恢复，Ceph减轻了客户端的责任（以及解除了中心化的网关，所以Ceph架构并不需要），并使用了OSDs的计算能力执行任务。参考Hardware Recommendations和Network Config Reference来理解Ceph如何利用计算资源的概念。</p>
+<h1 id="Ceph-协议"><a href="#Ceph-协议" class="headerlink" title="Ceph 协议"></a>Ceph 协议</h1><p>Ceph客户端使用本地协议来和存储集群交互。Ceph把这些功能打包到了 librados 库，所以可以创建你自己的客户端。下面的图描述了基本的架构。</p>
+<p><img src="http://i.imgur.com/Znlg4s0.png" alt=""></p>
+<h2 id="本地协议和-LIBRADOS"><a href="#本地协议和-LIBRADOS" class="headerlink" title="本地协议和 LIBRADOS"></a>本地协议和 LIBRADOS</h2><p>现代应用需要一个有异步通信能力的简单对象存储接口。Ceph存储集群就提供了这样的能力。接口提供了在整个集群中直接，并行访问对象的能力。</p>
+<ul>
+<li>Pool操作</li>
+<li>快照和写入时复制的克隆</li>
+<li>读写对象-创建或删除-整个对象或比特范围-追加或截断</li>
+<li>创建/设置/获取/删除 扩展属性(XATTRs)</li>
+<li>创建/设置/获取/删除 键值对</li>
+<li>复合操作或双重确认语义</li>
+<li>对象类</li>
+</ul>
+<h2 id="对象观察-通知"><a href="#对象观察-通知" class="headerlink" title="对象观察/通知"></a>对象观察/通知</h2><p>客户端可以对一个对象注册持久关注并保持和主OSD会话的打开。客户端可以发送一个通知消息并通过有效数据传输给所有观察者，在观察者收到通知后会收到回传通知。这使得客户端能够使用任何对象的异步通信通道。</p>
+<p><img src="http://i.imgur.com/3iCMLYi.png" alt=""></p>
+<h2 id="数据分段"><a href="#数据分段" class="headerlink" title="数据分段"></a>数据分段</h2><p>存储设备有吞吐量限制，这影响了性能和扩展性。所以，存储系统通常支持分段-向多个存储设备存储信息的连续片段-来增加吞吐量和性能。数据分片最常见的形式是RAID。和Ceph的分段最类似的是RAID 0，或者 ‘striped volume’ 。Ceph的分段提供了RAID 0分段的吞吐量，n-RAID镜像的可靠性和更快的恢复性。</p>
+<p>Ceph提供三类客户端：Ceph块设备，Ceph文件系统，Ceph对象存储。Ceph客户端把数据从它提供给用户的描述模式（一个块设备图，RESTful对象，CephFS文件系统目录）转换为用来存储到Ceph存储系统的对象。</p>
+<blockquote>
+<p>提示： Ceph存储系统存储忽的对象并不是分段的。Ceph对象存储，Ceph块设备和Ceph文件系统在存储集群上多个对象上分段数据。客户端通过 librados 直接写到存储集群时必须执行分段（和并行I/O）来获得这些益处。</p>
+</blockquote>
+<p>Ceph分段对简单的格式是分段数为1的对象。客户端写分段单元直到对象达到最大的容量，然后创建新的对象在存储额外的分段数据。最简单的分段形式可能是足够多的小块设备，S3、Swift对象和CephFS文件。然而，这种最简单的形式美柚最大化的利用Ceph跨pg分发数据的能力，因此并没有很好的改进性能。下面的图描述了分段最简单的形式。</p>
+<p><img src="http://i.imgur.com/Jl6ePPg.png" alt=""></p>
+<p>如果需要使用大的印象，大的S3或者Swift对象（例如视频），或者大的CephFS目录，你可以看到通过在一个对象集中多个对象的分段客户端数据带来的客观的读写性能改进。当客户端并行写分段单元到对象会得到客观的写性能。自从对象映射到不同的pg以及进一步映射到不同的OSDs，每一次写都以最大的写速度并行发生。单个磁盘的写会被磁头的移动（例如，每次6ms的寻道）和单个设备的带宽（例如，100MB/s)所限制。通过在多个对象间（映射到了不同的pg和OSDs）传播写操作，Ceph可以减少每个硬盘的寻道次数并合并多个硬盘来获得更快的写（或读）速度。</p>
+<blockquote>
+<p>注意：分段和对象副本是独立的。CRUSH通过OSDs实现副本，分段会自动复制副本。</p>
+</blockquote>
+<p>在下面的图中，客户端数据通过一个包含4个对象的对象集分段（图中的 object set 1 ），其中第一个分段单元是 strip unit 0 位于 object 0 ，第4块分段单元 stripe unit 3 位于 object 3 。在写完这4个分段后，客户端决定对象集是否满了。如果对象集没有满，客户端开始再次写分段到第一个对象（下途中的 object 0 )。如果对象集满了，客户端创建一个新的对象集（ 下图中的 object 2 )，然后开始在新对象集中的第一个对象（下图中的 object 4 ）写第一个分段（ stripe unit 16 ）。</p>
+<p><img src="http://i.imgur.com/WwCMDZX.png" alt=""></p>
+<p>3个变量决定了Ceph如何分段数据：</p>
+<ul>
+<li>Object Size: 存储集群中的对象有一个最大配置大小（例如，2MB，4MB等）。对象的大小要足够大能够容纳许多分段单元，而且应该是分段单元大小的倍数。</li>
+<li>Stripe Width: 分段会有配置的单元大小（例如，64kb）。客户端会把要写入对象的数据划分为同样大小的分段单元，除了最后一个分段单元。分段的宽度，需要是对象大小的分数，这样一个对象才能包含许多分段单元。</li>
+<li>Stripe Count: 客户端连续的写分段单元到一系列的对象，这一系列对象个数由stripe count决定。这一系列的对象称为对象集。在客户端写完对象集的最后一个对象后，它会返回对象集中的第一个对象。</li>
+</ul>
+<blockquote>
+<p>重要：在把集群投入生产前测试你的分段配置性能。在分段好数据并写入对象后，就不能改变分段参数了。</p>
+</blockquote>
+<p>一旦客户端划分数据到段并映射分段单元到对象后，Ceph的CRUSH算法会在对象以文件形式存储到磁盘前，把对象映射到pg，以及映射pg到OSD守护进程。</p>
+<blockquote>
+<p>注意：因为客户端写到单个pool中，所有的数据分段到的对象映射到同一个pool中的pg。所以他们使用同一个CRUSH映射和相同的访问控制。</p>
+</blockquote>
+<h1 id="Ceph-客户端"><a href="#Ceph-客户端" class="headerlink" title="Ceph 客户端"></a>Ceph 客户端</h1><p>Ceph客户端包括一系列服务接口，包括：</p>
+<ul>
+<li>块设备：Ceph块设备（又名RBD）服务提供可变大小，精简配置的块设备，拥有快照和克隆功能。Ceph分段集群中的块设备来获得高性能。Ceph支持内核对象（KO）和直接使用 librdb 的QEMU虚拟机-避免内核对象出现在虚拟系统上层。</li>
+<li>对象存储：Ceph对象存储（又名，RGW）服务提供RESTful接口和Amazon S3和OpenStack Swift兼容。</li>
+<li>文件系统：Ceph 文件系统（CephFS）服务提供POSIX兼容的文件系统，可以使用 mount 作为文件系统或者在用户空间（FUSE）。</li>
+</ul>
+<p>Ceph可以运行额外的OSDs，MDSs和Monitors实例来扩展和获得高可用性。下图描述了上层架构。</p>
+<p><img src="http://i.imgur.com/ZJqRvHm.png" alt=""></p>
+<h2 id="Ceph对象存储"><a href="#Ceph对象存储" class="headerlink" title="Ceph对象存储"></a>Ceph对象存储</h2><p>Ceph的对象存储守护进程， radisgw ，是一个FastCGI服务，提供RESTful HTTP API来存储对象和元数据。它有自己的数据格式，位于Ceph存储集群的顶层，并维护自己的用户数据库，授权和访问控制。RADOS网关使用统一的命名空间，这意味着，你可以使用OpenStack Swift兼容的API或者Amazon S3兼容的API。例如，你可以在一个应用用S3兼容的API写数据然后在另一个应用用Swift兼容的API来读数据。</p>
+<blockquote>
+<p>S3/Swift对象和存储集群对象比较<br>Ceph的对象存储使用术语 对象 来描述存储的数据。S3和Swift对象和Ceph写到存储集群的对象并不一样。Ceph对象存储的对象是映射到Ceph存储集群的对象。S3和Swift对象并不需要和存储集群存储的对象以1:1的方式符合。S3或者Swift的对象映射到多个Ceph对象也是可以的。</p>
+</blockquote>
+<p>详见Ceph对象存储</p>
+<h2 id="Ceph块设备"><a href="#Ceph块设备" class="headerlink" title="Ceph块设备"></a>Ceph块设备</h2><p>Ceph块设备在存储系统多个对象间分段块设备镜像，每个对象映射到pg并分发，pg在整个集群中独立的 ceph-osd 守护进程之间传播。</p>
+<blockquote>
+<p>分段技术可以使RBD块设备比单个服务器表现更好！</p>
+</blockquote>
+<p>精简配置且可快照的块设备对虚拟化和云计算来说是吸引人的选项。在虚拟机场景，人们通常在Qemu/KVM部署Ceph块设备到有rbd的网络存储驱动，主机机器使用 librbd 来提供块设备服务给客户。许多云计算服务商使用 libvirt 来融合虚拟管理系统。相比其他解决方案，你可以使用精简配置的Ceph块设备和Qemu， libvirt 来提供OpenStack和CloudStack服务。</p>
+<p>虽然我们当前的 librbd 不支持其他的虚拟管理系统，你同样可以使用Ceph块设备内核对象来提供块给设备。其他虚拟技术例如Xen可以访问Ceph的块设备内核对象。这些可以通过命令行工具 rbd 。</p>
+<h2 id="Ceph文件系统"><a href="#Ceph文件系统" class="headerlink" title="Ceph文件系统"></a>Ceph文件系统</h2><p>在基于对象的Ceph存储集群的上层，Ceph文件系统（CephFS）提供POSIX兼容的文件系统来作为服务。CephFS文件映射Ceph存储集群存储的到对象。Ceph客户端把Ceph文件系统作为内核对象或者用户空间的文件系统（FUSE）挂载。</p>
+<p><img src="http://i.imgur.com/E7wYa5U.png" alt=""></p>
+<p>Ceph文件系统服务包括存储集群部署的Ceph元数据服务器（MDS）。MDS的目的是存储所有的文件系统元数据（目录，文件拥有者，访问模式等）到高可靠性的元数据服务器，其上的元数据都驻留在内存。MDS（称为 ceph-mds ）存在的原因是简单文件系统操作像列出目录或者改变目录（ls，cd）没有必要加重OSD守护进程的负担。所以从数据意义中分离元数据意味着Ceph文件系统可以提供高性能服务而不用涉及存储集群。</p>
+<p>CephFS从数据中分离元数据，存储元数据到MDS，并存储文件数据到存储集群的一个或多个对象。Ceph文件系统致力于POSIX兼容性。Ceph-mds可以运行为单个进程。或者他可以分发到多个物理机器，同样是为了高可用性和扩展性。</p>
+<ul>
+<li>高可用性：额外的 ceph-mds 实例可以作为后备，准备接管任何失效 ceph-mds 的职责。这很容易，因为所有的数据，包括日志卷，都保存在RADOS。这类转移会通过 ceph-mon 自动触发。</li>
+<li>扩展性：多个 ceph-mon 实例可以处于活跃状态，他们会把目录树分割为子树（并为繁忙的目录分片），高效的平衡所有在线服务的负载。</li>
+</ul>
+<p>后备和活跃状态的组合是可能的，例如运行3个活跃的 ceph-mds 实例用来扩展，一个后备实例保障高可用性。</p>
 
       
     </div>
@@ -611,7 +697,7 @@
                alt="niupj" />
           <p class="site-author-name" itemprop="name">niupj</p>
            
-              <p class="site-description motion-element" itemprop="description">不畏将来，不忘过去</p>
+              <p class="site-description motion-element" itemprop="description">不畏将来，不念过去</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -676,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ceph架构"><span class="nav-number">1.</span> <span class="nav-text">Ceph架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ceph的存储集群"><span class="nav-number">1.1.</span> <span class="nav-text">Ceph的存储集群</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#存储数据"><span class="nav-number">1.1.1.</span> <span class="nav-text">存储数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展性和高可靠性"><span class="nav-number">1.1.2.</span> <span class="nav-text">扩展性和高可靠性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CRUSH介绍"><span class="nav-number">1.1.3.</span> <span class="nav-text">CRUSH介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群映射"><span class="nav-number">1.1.4.</span> <span class="nav-text">集群映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠性Monitors"><span class="nav-number">1.1.5.</span> <span class="nav-text">高可靠性Monitors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠性验证"><span class="nav-number">1.1.6.</span> <span class="nav-text">高可靠性验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支撑超大规模的智能守护进程"><span class="nav-number">1.1.7.</span> <span class="nav-text">支撑超大规模的智能守护进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态集群管理"><span class="nav-number">1.2.</span> <span class="nav-text">动态集群管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于Pools"><span class="nav-number">1.2.1.</span> <span class="nav-text">关于Pools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#映射PGs到OSDs"><span class="nav-number">1.2.2.</span> <span class="nav-text">映射PGs到OSDs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算PG的ID"><span class="nav-number">1.2.3.</span> <span class="nav-text">计算PG的ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Peering-and-sets"><span class="nav-number">1.2.4.</span> <span class="nav-text">Peering and sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重平衡"><span class="nav-number">1.2.5.</span> <span class="nav-text">重平衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据一致性"><span class="nav-number">1.2.6.</span> <span class="nav-text">数据一致性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#纠删码"><span class="nav-number">1.3.</span> <span class="nav-text">纠删码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读写编码块"><span class="nav-number">1.3.1.</span> <span class="nav-text">读写编码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完全中断写"><span class="nav-number">1.3.2.</span> <span class="nav-text">完全中断写</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ceph的存储集群"><span class="nav-number">1.</span> <span class="nav-text">Ceph的存储集群</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储数据"><span class="nav-number">1.1.</span> <span class="nav-text">存储数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展性和高可靠性"><span class="nav-number">1.2.</span> <span class="nav-text">扩展性和高可靠性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CRUSH介绍"><span class="nav-number">1.2.1.</span> <span class="nav-text">CRUSH介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群映射"><span class="nav-number">1.2.2.</span> <span class="nav-text">集群映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠性Monitors"><span class="nav-number">1.2.3.</span> <span class="nav-text">高可靠性Monitors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可靠性验证"><span class="nav-number">1.2.4.</span> <span class="nav-text">高可靠性验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支撑超大规模的智能守护进程"><span class="nav-number">1.2.5.</span> <span class="nav-text">支撑超大规模的智能守护进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态集群管理"><span class="nav-number">1.3.</span> <span class="nav-text">动态集群管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于Pools"><span class="nav-number">1.3.1.</span> <span class="nav-text">关于Pools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#映射PGs到OSDs"><span class="nav-number">1.3.2.</span> <span class="nav-text">映射PGs到OSDs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算PG的ID"><span class="nav-number">1.3.3.</span> <span class="nav-text">计算PG的ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Peering-and-sets"><span class="nav-number">1.3.4.</span> <span class="nav-text">Peering and sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重平衡"><span class="nav-number">1.3.5.</span> <span class="nav-text">重平衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据一致性"><span class="nav-number">1.3.6.</span> <span class="nav-text">数据一致性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#纠删码"><span class="nav-number">1.4.</span> <span class="nav-text">纠删码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读写编码块"><span class="nav-number">1.4.1.</span> <span class="nav-text">读写编码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完全中断写"><span class="nav-number">1.4.2.</span> <span class="nav-text">完全中断写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存层"><span class="nav-number">1.5.</span> <span class="nav-text">缓存层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展Ceph"><span class="nav-number">1.6.</span> <span class="nav-text">扩展Ceph</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ceph-协议"><span class="nav-number">2.</span> <span class="nav-text">Ceph 协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地协议和-LIBRADOS"><span class="nav-number">2.1.</span> <span class="nav-text">本地协议和 LIBRADOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象观察-通知"><span class="nav-number">2.2.</span> <span class="nav-text">对象观察/通知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分段"><span class="nav-number">2.3.</span> <span class="nav-text">数据分段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ceph-客户端"><span class="nav-number">3.</span> <span class="nav-text">Ceph 客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ceph对象存储"><span class="nav-number">3.1.</span> <span class="nav-text">Ceph对象存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ceph块设备"><span class="nav-number">3.2.</span> <span class="nav-text">Ceph块设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ceph文件系统"><span class="nav-number">3.3.</span> <span class="nav-text">Ceph文件系统</span></a></li></ol></li></ol></div>
             
 
           </div>
